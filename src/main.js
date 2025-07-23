@@ -16,11 +16,13 @@ window.addEventListener("DOMContentLoaded", async () => {
     const urlToLoad = savedUrl.trim() ? savedUrl : defaultUrl;
     if (iframe) {
       iframe.src = urlToLoad;
+      iframe.contentWindow.focus();
     }
   } catch (error) {
     console.error("Error loading saved URL:", error);
     if (iframe) {
       iframe.src = defaultUrl;
+      iframe.contentWindow.focus();
     }
   }
 
