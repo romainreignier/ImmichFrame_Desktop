@@ -80,4 +80,18 @@ window.addEventListener("DOMContentLoaded", async () => {
       urlModal.style.display = "none";
     });
   }
+
+  // Keyboard key press handling
+  window.addEventListener("keydown", async (event) => {
+    switch (event.key) {
+      case "ArrowUp":
+        if (btnSettings) btnSettings.click();
+        break;
+      case "ArrowDown":
+        if (btnQuit) btnQuit.click();
+        break;
+      default:
+        break;
+    }
+  });
 });
